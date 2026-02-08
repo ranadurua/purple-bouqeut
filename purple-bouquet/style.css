@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(#0b1230, #050812);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: purple;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.bouquet {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.flower {
+  width: 80px;
+  height: 160px;
+  position: relative;
+}
+
+.flower::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #b46cff, #5c1b8a);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.flower::after {
+  content: "";
+  width: 8px;
+  height: 120px;
+  background: #3b7a57;
+  position: absolute;
+  top: 70px;
+  left: 36px;
+}
+
+.heart {
+  position: absolute;
+  top: -50px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.letter {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 12px;
+}
+#stars::after {
+  content: "✦ ✧ ✦ ✧ ✦";
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  animation: moveStars 20s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes moveStars {
+  from { transform: translateX(-100px); }
+  to { transform: translateX(100px); }
+}
+
